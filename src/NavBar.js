@@ -2,8 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const linkStyles = {
-    display: "inline-block",
-    width: "50px",
+    display: "inline",
+    width: "100%",
     padding: "12px",
     margin: "0 6px 6px",
     background: "blue",
@@ -13,7 +13,9 @@ const linkStyles = {
 
 const active = {
     background: "salmon",
-    color: "black"
+    color: "black",
+    "font-weight": "bold"
+
 }
 
 function NavBar() {
@@ -26,6 +28,22 @@ function NavBar() {
                 activeStyle={active}
             >
                 Home
+            </NavLink>
+            <NavLink
+                to="/findGame"
+                exact
+                style={linkStyles}
+                activeStyle={active}
+            >
+                Find a Game
+            </NavLink>
+            <NavLink
+                to="/findPlayer"
+                exact
+                style={linkStyles}
+                activeStyle={active}
+            >
+                Find a Player
             </NavLink>
             <NavLink
                 to="/login"
