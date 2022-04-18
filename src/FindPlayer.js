@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import {useHistory} from "react-router-dom"
 
 
 function FindPlayer({findAPlayer}) {
+    const history = useHistory()
 
     const [formData, setFormData] = useState({
         name: "",
@@ -24,7 +26,7 @@ function FindPlayer({findAPlayer}) {
         e.preventDefault()
         const input = formData.date
         const [year, month, day] = input.split('-')
-        const formatDate = `${month}-${day}-${year}`
+        const formatDate = `${month}/${day}/${year}`
 
         const request = {
             name: formData.name,
@@ -38,6 +40,7 @@ function FindPlayer({findAPlayer}) {
         console.log(request)
         findAPlayer(request)
         alert("Player Request has been added! Redirecting to Homepage...")
+        history.push("/")
         // Persist the data and redirect user to the home page
     }
 
