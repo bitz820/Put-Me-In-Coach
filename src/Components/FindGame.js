@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-// import SearchBar from "./SearchBar";
 import GameCard from './GameCard';
 import "./GameCard.css"
 
@@ -9,7 +8,6 @@ function FindGame({ incompleteTeams }) {
 
   const handleChange = (e) => {
       setSearchedTeam(e.target.value)
-      // console.log(searchedTeam)
       
   }
   const searchResults = incompleteTeams.filter((teams) =>{
@@ -24,7 +22,6 @@ function FindGame({ incompleteTeams }) {
     <div className="search">
             <div className="searchInputs">
             <input onChange={handleChange} type="text" placeholder={"Search Team Name..."}/>
-            <div className="searchIcon"> </div>
             </div>
             
         </div>
