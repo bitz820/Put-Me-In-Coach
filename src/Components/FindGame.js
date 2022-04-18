@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+// import SearchBar from "./SearchBar";
 import GameCard from './GameCard';
 import "./GameCard.css"
 
@@ -8,10 +9,13 @@ function FindGame({ incompleteTeams }) {
 
   const handleChange = (e) => {
       setSearchedTeam(e.target.value)
+      // console.log(searchedTeam)
+      
   }
   const searchResults = incompleteTeams.filter((teams) =>{
-    return teams.name.toLowerCase().includes(searchedTeam.toLowerCase())
-  } )
+    return teams.name.toLowerCase().includes(searchedTeam)
+    // return teams.name.toLowerCase().includes(searchedTeam.toLowerCase())
+  })
 
   const renderTeamsNeedingPlayers = searchResults.map(item => <GameCard key={item.id} data={item} />)
 
@@ -20,7 +24,9 @@ function FindGame({ incompleteTeams }) {
     <div className="search">
             <div className="searchInputs">
             <input onChange={handleChange} type="text" placeholder={"Search Team Name..."}/>
+            <div className="searchIcon"> </div>
             </div>
+            
         </div>
         <div className="FindGame">
       <div className='search-results'>
