@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import NavBar from './NavBar'
 import Home from './Home'
@@ -7,19 +7,45 @@ import FindPlayer from './FindPlayer'
 import Login from './Login'
 
 
+
 function App() {
+    const [allTeams, setAllTeams] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:3000/teams")
+            .then(r => r.json())
+            .then(teams => setAllTeams(teams))
+    }, [setAllTeams])
+
+    const findAPlayer = (request) => {
+        const configObj = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(request)
+        }
+        fetch("http://localhost:3000/teams", configObj)
+            .then(r => r.json())
+            .then(data => {
+                console.log(data)
+                setAllTeams([...allTeams, request])
+            })
+    }
+
     return (
         <div>
             <NavBar />
             <Switch>
                 <Route exact path="/">
-                    <Home />
+                    <Home data={allTeams} />
                 </Route>
                 <Route exact path="/findGame">
                     <FindGame />
                 </Route>
                 <Route exact path="/findPlayer">
-                    <FindPlayer />
+                    <FindPlayer findAPlayer={findAPlayer} />
                 </Route>
                 <Route path="/login" >
                     <Login />

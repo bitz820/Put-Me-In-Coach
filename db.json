@@ -1,84 +1,94 @@
 {
-    "team":[
-        {
-            "id": 1,
-            "name":"Lakers",
-            "maxPlayers": 3,
-            "playersNeeded": 0,
-            "color": "green",
-            "date": "2022/04/23"
-        },
-        {
-            "id": 2,
-            "name":"Red Flags",
-            "maxPlayers": 5,
-            "playersNeeded": 1,
-            "color": "red",
-            "date": "2022/05/23"
-        },
-        {
-            "id": 3,
-            "name":"Raptors",
-            "maxPlayers": 5,
-            "playersNeeded": 2,
-            "color": "white",
-            "date": "2022/05/24"
-        },
-        {
-            "id": 4,
-            "name":"Flatirons",
-            "maxPlayers": 5,
-            "playersNeeded": 4,
-            "color": "blue",
-            "date": "2022/05/29"
-        },
-        {
-            "id": 5,
-            "name":"Stack Squad",
-            "maxPlayers": 3,
-            "playersNeeded": 0,
-            "color": "red",
-            "date": "2022/05/29"
-        },
-        {
-            "id": 6,
-            "name":"Curry Squad",
-            "maxPlayers": 3,
-            "playersNeeded": 2,
-            "color": "yellow",
-            "date": "2022/05/30"
-        },
-        {
-            "id": 7,
-            "name":"Hammer Time",
-            "maxPlayers": 3,
-            "playersNeeded": 0,
-            "color": "black",
-            "date": "2022/05/30"
-        },
-        {
-            "id": 8,
-            "name":"Dunks",
-            "maxPlayers": 5,
-            "playersNeeded": 0,
-            "color": "red",
-            "date": "2022/05/30"
-        },
-        {
-            "id": 9,
-            "name":"Juniors",
-            "maxPlayers": 5,
-            "playersNeeded": 1,
-            "color": "white",
-            "date": "2022/05/31"
-        },
-        {
-            "id": 10,
-            "name":"Magic",
-            "maxPlayers": 3,
-            "playersNeeded": 2,
-            "color": "black",
-            "date": "2022/05/31"
-        }
-    ]
+  "teams": [
+    {
+      "id": 1,
+      "name": "Lakers",
+      "type": "3v3",
+      "playersNeeded": 0,
+      "color": "green",
+      "date": "04/23/2022",
+      "court": 1
+    },
+    {
+      "id": 2,
+      "name": "Red Flags",
+      "type": "5v5",
+      "playersNeeded": 1,
+      "color": "red",
+      "date": "05/23/2022",
+      "court": 4
+    },
+    {
+      "id": 3,
+      "name": "Raptors",
+      "type": "5v5",
+      "playersNeeded": 2,
+      "color": "white",
+      "date": "05/24/2022",
+      "court": 6
+    },
+    {
+      "id": 4,
+      "name": "Flatirons",
+      "type": "5v5",
+      "playersNeeded": 4,
+      "color": "blue",
+      "date": "05/29/2022",
+      "court": 2
+    },
+    {
+      "id": 5,
+      "name": "Stack Squad",
+      "type": "3v3",
+      "playersNeeded": 0,
+      "color": "red",
+      "date": "05/29/2022",
+      "court": 2
+    },
+    {
+      "id": 6,
+      "name": "Curry Squad",
+      "type": "3v3",
+      "playersNeeded": 2,
+      "color": "yellow",
+      "date": "05/30/2022",
+      "court": 1
+    },
+    {
+      "id": 7,
+      "name": "Hammer Time",
+      "type": "3v3",
+      "playersNeeded": 0,
+      "color": "black",
+      "date": "05/30/2022",
+      "court": 3
+    },
+    {
+      "id": 8,
+      "name": "Dunks",
+      "type": "5v5",
+      "playersNeeded": 0,
+      "color": "red",
+      "date": "05/30/2022",
+      "court": 4
+    },
+    {
+      "id": 9,
+      "name": "Juniors",
+      "type": "5v5",
+      "playersNeeded": 1,
+      "color": "white",
+      "date": "05/31/2022",
+      "court": 5
+    },
+    {
+      "id": 10,
+      "name": "Magic",
+      "type": "3v3",
+      "playersNeeded": 2,
+      "color": "black",
+      "date": "05/31/2022",
+      "court": 8
+    }
+  ]
 }

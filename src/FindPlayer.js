@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 
-function FindPlayer() {
+function FindPlayer({findAPlayer}) {
 
     const [formData, setFormData] = useState({
         name: "",
-        players: "",
+        playersNeeded: "",
         type: "",
         color: "",
         date: 12 / 31 / 2022,
@@ -22,34 +22,22 @@ function FindPlayer() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        // const input = formData.date
-        // const [year, month, day] = input.split('-')
-        // const formatDate = `${month}-${day}-${year}`
+        const input = formData.date
+        const [year, month, day] = input.split('-')
+        const formatDate = `${month}-${day}-${year}`
+
         const request = {
             name: formData.name,
-            players: parseInt(formData.players),
+            playersNeeded: parseInt(formData.playersNeeded),
             type: formData.type,
             color: formData.color,
-            // date: formatDate,
-            date: formData.date,
-            court: formData.court
+            date: formatDate,
+            // date: formData.date,
+            court: parseInt(formData.court)
         }
         console.log(request)
-
-        // const configObj = {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //         Accept: "application/json"
-        //     },
-        //     body: JSON.stringify(request)
-        // }
-        // fetch("", configObj)
-        // .then(r => r.json())
-        // .then(data => {
-        // console.log(data)
-        // setAllTeams([...allTeams, request])
-        // })
+        findAPlayer(request)
+        alert("Player Request has been added! Redirecting to Homepage...")
         // Persist the data and redirect user to the home page
     }
 
@@ -59,7 +47,7 @@ function FindPlayer() {
             <h3>In a Pinch? Fill out the form below and request a last minute substitution!</h3>
             <form onSubmit={handleSubmit}>
                 <input onChange={handleChange} type="text" name="name" value={formData.name} placeholder="Team Name" /><br />
-                <input onChange={handleChange} type="text" name="players" value={formData.players} placeholder="# of Players Needed" /><br />
+                <input onChange={handleChange} type="text" name="playersNeeded" value={formData.playersNeeded} placeholder="# of players Needed" /><br />
                 <span>
                     <label>Game Type <br />
                         <select onChange={handleChange} name="type">

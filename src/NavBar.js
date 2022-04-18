@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+
 const linkStyles = {
     display: "inline",
     width: "100%",
@@ -20,7 +21,7 @@ const active = {
 
 function NavBar() {
     return (
-        <div>
+        <div >
             <NavLink
                 to="/"
                 exact
