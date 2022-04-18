@@ -11,6 +11,7 @@ import Login from './Login'
 
 function App() {
     const [allTeams, setAllTeams] = useState([])
+    // const [filterTeams, setFilterTeams] = useState(allTeams)
 
     useEffect(() => {
         fetch("http://localhost:3000/teams")
@@ -35,6 +36,11 @@ function App() {
             })
     }
 
+    const incompleteTeams = allTeams.filter(team =>  team.playersNeeded > 0)
+
+    console.log(incompleteTeams)
+
+
     return (
         <div className='app-style'>
             <NavBar />
@@ -43,7 +49,7 @@ function App() {
                     <Home data={allTeams} />
                 </Route>
                 <Route exact path="/findGame">
-                    <FindGame />
+                    <FindGame incompleteTeams={incompleteTeams}/>
                 </Route>
                 <Route exact path="/findPlayer">
                     <FindPlayer findAPlayer={findAPlayer} />

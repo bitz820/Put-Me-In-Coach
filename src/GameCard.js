@@ -35,6 +35,10 @@ function GameCard({ data }) {
                 <p>Court Number: {court}</p>
                 <p>Game Date: {date}</p>
             </div>
+
+            {/* Conditional for a button */}
+
+
         </div>
     )
 }
