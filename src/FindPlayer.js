@@ -27,7 +27,6 @@ function FindPlayer({findAPlayer}) {
         const input = formData.date
         const [year, month, day] = input.split('-')
         const formatDate = `${month}/${day}/${year}`
-
         const request = {
             name: formData.name,
             playersNeeded: parseInt(formData.playersNeeded),
