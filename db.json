@@ -1,0 +1,84 @@
+{
+    "team":[
+        {
+            "id": 1,
+            "name":"Lakers",
+            "maxPlayers": 3,
+            "playersNeeded": 0,
+            "color": "green",
+            "date": "2022/04/23"
+        },
+        {
+            "id": 2,
+            "name":"Red Flag",
+            "maxPlayers": 5,
+            "playersNeeded": 1,
+            "color": "red",
+            "date": "2022/05/23"
+        },
+        {
+            "id": 3,
+            "name":"Raptors",
+            "maxPlayers": 5,
+            "playersNeeded": 2,
+            "color": "white",
+            "date": "2022/05/24"
+        },
+        {
+            "id": 4,
+            "name":"Flatirons",
+            "maxPlayers": 5,
+            "playersNeeded": 4,
+            "color": "blue",
+            "date": "2022/05/29"
+        },
+        {
+            "id": 5,
+            "name":"Stack Squad",
+            "maxPlayers": 3,
+            "playersNeeded": 0,
+            "color": "red",
+            "date": "2022/05/29"
+        },
+        {
+            "id": 6,
+            "name":"Curry Squad",
+            "maxPlayers": 3,
+            "playersNeeded": 2,
+            "color": "yellow",
+            "date": "2022/05/30"
+        },
+        {
+            "id": 7,
+            "name":"Hammer Time",
+            "maxPlayers": 3,
+            "playersNeeded": 0,
+            "color": "white",
+            "date": "2022/05/30"
+        },
+        {
+            "id": 8,
+            "name":"Dunks",
+            "maxPlayers": 5,
+            "playersNeeded": 0,
+            "color": "white",
+            "date": "2022/05/30"
+        },
+        {
+            "id": 9,
+            "name":"Juniors",
+            "maxPlayers": 5,
+            "playersNeeded": 1,
+            "color": "white",
+            "date": "2022/05/31"
+        },
+        {
+            "id": 10,
+            "name":"Magic",
+            "maxPlayers": 3,
+            "playersNeeded": 2,
+            "color": "black",
+            "date": "2022/05/31"
+        }
+    ]
+}
