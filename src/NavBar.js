@@ -14,7 +14,7 @@ const linkStyles = {
 const active = {
     background: "salmon",
     color: "black",
-    "font-weight": "bold"
+    fontWeight: "bold"
 
 }
 
