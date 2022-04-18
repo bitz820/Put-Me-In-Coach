@@ -12,6 +12,7 @@ function FindGame({ incompleteTeams }) {
       <SearchBar placeholder="Search Team Name..." />
       <div className='search-results'>
         {renderTeamsNeedingPlayers}
+        console.log("hi!")
       </div>
     </div>
 
