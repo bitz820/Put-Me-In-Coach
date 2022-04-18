@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./GameCard.css"
-import logo3 from "./3Team.png"
-import logo5 from "./5Team.png"
+import logo3 from "../Media/3Team.png"
+import logo5 from "../Media/5Team.png"
 
 
 function GameCard({ data }) {
