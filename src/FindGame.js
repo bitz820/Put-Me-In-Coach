@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import SearchBar from "./SearchBar";
 
 function FindGame() {
   return (
-    <div>FindGame</div>
+    <div className="FindGame">
+      <SearchBar placeholder="Search Team Name..." />
+    </div>
+
   )
 }
 
