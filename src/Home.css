@@ -1,6 +1,10 @@
-.home-style {
+.home-style{
     text-align: center;
+    
+}
+
+.home-card-style {
     display: flex;
-    flex-flow: column;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }

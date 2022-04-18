@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import "./App.css"
 import NavBar from './NavBar'
 import Home from './Home'
 import FindGame from './FindGame'
@@ -35,7 +36,7 @@ function App() {
     }
 
     return (
-        <div>
+        <div className='app-style'>
             <NavBar />
             <Switch>
                 <Route exact path="/">

@@ -1,4 +1,5 @@
 import React from 'react'
+import "./NavBar.css"
 import { NavLink } from 'react-router-dom'
 
 
@@ -21,7 +22,7 @@ const active = {
 
 function NavBar() {
     return (
-        <div >
+        <div className='nav-style'>
             <NavLink
                 to="/"
                 exact
