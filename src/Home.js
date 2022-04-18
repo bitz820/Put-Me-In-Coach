@@ -10,7 +10,10 @@ function Home({data}) {
     <div className='home-style'>
       <h1>Welcome to Put Me In, Coach!</h1>
       <h3>Your #1 Source for last minute substitutions and available pickup games!</h3>
+      <div className='home-card-style'>
+
       {renderTeams}
+      </div>
     </div>
   )
 }
