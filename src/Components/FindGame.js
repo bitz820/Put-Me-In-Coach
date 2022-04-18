@@ -1,20 +1,34 @@
-import React from 'react';
-import SearchBar from "./SearchBar";
+import React, {useState} from "react";
 import GameCard from './GameCard';
 import "./GameCard.css"
 
 function FindGame({ incompleteTeams }) {
 
-  const renderTeamsNeedingPlayers = incompleteTeams.map(item => <GameCard key={item.id} data={item} />)
+  const [searchedTeam, setSearchedTeam] = useState([""])
+
+  const handleChange = (e) => {
+      setSearchedTeam(e.target.value)
+  }
+  const searchResults = incompleteTeams.filter((teams) =>{
+    return teams.name.toLowerCase().includes(searchedTeam.toLowerCase())
+  } )
+
+  const renderTeamsNeedingPlayers = searchResults.map(item => <GameCard key={item.id} data={item} />)
 
   return (
-    <div className="FindGame">
-      <SearchBar placeholder="Search Team Name..." />
+    <>
+    <div className="search">
+            <div className="searchInputs">
+            <input onChange={handleChange} type="text" placeholder={"Search Team Name..."}/>
+            </div>
+        </div>
+        <div className="FindGame">
       <div className='search-results'>
         {renderTeamsNeedingPlayers}
-        console.log("hi!")
       </div>
     </div>
+    </>
+    
 
   )
 }
