@@ -5,7 +5,7 @@
       "name": "Lakers",
       "type": "3v3",
       "playersNeeded": 0,
-      "color": "green",
+      "color": "Green",
       "date": "04/23/2022",
       "court": 1
     },
@@ -14,7 +14,7 @@
       "name": "Red Flags",
       "type": "5v5",
       "playersNeeded": 1,
-      "color": "red",
+      "color": "Red",
       "date": "05/23/2022",
       "court": 4
     },
@@ -23,7 +23,7 @@
       "name": "Raptors",
       "type": "5v5",
       "playersNeeded": 2,
-      "color": "white",
+      "color": "White",
       "date": "05/24/2022",
       "court": 6
     },
@@ -32,7 +32,7 @@
       "name": "Flatirons",
       "type": "5v5",
       "playersNeeded": 4,
-      "color": "blue",
+      "color": "Blue",
       "date": "05/29/2022",
       "court": 2
     },
@@ -41,7 +41,7 @@
       "name": "Stack Squad",
       "type": "3v3",
       "playersNeeded": 0,
-      "color": "red",
+      "color": "Red",
       "date": "05/29/2022",
       "court": 2
     },
@@ -50,7 +50,7 @@
       "name": "Curry Squad",
       "type": "3v3",
       "playersNeeded": 2,
-      "color": "yellow",
+      "color": "Yellow",
       "date": "05/30/2022",
       "court": 1
     },
@@ -59,7 +59,7 @@
       "name": "Hammer Time",
       "type": "3v3",
       "playersNeeded": 0,
-      "color": "black",
+      "color": "Black",
       "date": "05/30/2022",
       "court": 3
     },
@@ -68,7 +68,7 @@
       "name": "Dunks",
       "type": "5v5",
       "playersNeeded": 0,
-      "color": "red",
+      "color": "Red",
       "date": "05/30/2022",
       "court": 4
     },
@@ -77,7 +77,7 @@
       "name": "Juniors",
       "type": "5v5",
       "playersNeeded": 1,
-      "color": "white",
+      "color": "White",
       "date": "05/31/2022",
       "court": 5
     },
@@ -86,7 +86,7 @@
       "name": "Magic",
       "type": "3v3",
       "playersNeeded": 2,
-      "color": "black",
+      "color": "Black",
       "date": "05/31/2022",
       "court": 8
     }
