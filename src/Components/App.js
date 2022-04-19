@@ -6,6 +6,7 @@ import Home from './Home'
 import PlayInAGame from './PlayInAGame'
 import FindPlayer from './FindPlayer'
 import Login from './Login'
+import EditProfile from './EditProfile'
 
 
 
@@ -70,14 +71,17 @@ function App() {
                 <Route exact path="/">
                     <Home data={allTeams} />
                 </Route>
+                <Route path="/login" >
+                    <Login />
+                </Route>
                 <Route exact path="/playInAGame">
                     <PlayInAGame incompleteTeams={incompleteTeams} handleAddToTeam={handleAddToTeam}/>
                 </Route>
                 <Route exact path="/findPlayer">
                     <FindPlayer findAPlayer={findAPlayer} />
                 </Route>
-                <Route path="/login" >
-                    <Login />
+                <Route path="/editProfile">
+                    <EditProfile />
                 </Route>
             </Switch>
 

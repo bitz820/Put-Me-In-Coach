@@ -24,6 +24,14 @@ function NavBar() {
     return (
         <div className='nav-style'>
             <NavLink
+                to="/login"
+                exact
+                style={linkStyles}
+                activeStyle={active}
+            >
+                Login
+            </NavLink>
+            <NavLink
                 to="/"
                 exact
                 style={linkStyles}
@@ -48,13 +56,14 @@ function NavBar() {
                 Find a Player
             </NavLink>
             <NavLink
-                to="/login"
+                to="/editProfile"
                 exact
                 style={linkStyles}
                 activeStyle={active}
             >
-                Login
+                Edit Profile
             </NavLink>
+
 
         </div>
     )

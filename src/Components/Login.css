@@ -1,0 +1,27 @@
+.login-form {
+    color: darkolivegreen
+}
+
+.title {
+    font-size: 60px;
+    text-align: center;
+    padding: 20px
+}
+
+.successful {
+    width: 100%;
+    height: 100%; 
+    text-align: center;
+    font-size: 40px;
+}
+
+input{
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

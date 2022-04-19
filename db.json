@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Lakers",
       "type": "3v3",
-      "playersNeeded": 1,
+      "playersNeeded": 0,
       "color": "Green",
       "date": "04/23/2022",
       "court": 1
@@ -107,6 +107,15 @@
       "date": "04/05/2022",
       "court": 3,
       "id": 12
+    },
+    {
+      "name": "TEST",
+      "playersNeeded": 3,
+      "type": "5v5",
+      "color": "magenta",
+      "date": "04/21/2022",
+      "court": 3,
+      "id": 13
     }
   ]
 }

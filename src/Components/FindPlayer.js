@@ -60,8 +60,8 @@ function FindPlayer({ findAPlayer }) {
                 <label>
                     Game Type:
                     <select onChange={handleChange} name="type">
-                        <option name="type" value="3v3">3 V 3</option>
-                        <option name="type" value="5v5">5 V 5</option>
+                        <option value="3v3">3 V 3</option>
+                        <option value="5v5">5 V 5</option>
                     </select>
                 </label><br/>
                 <label>
