@@ -1,0 +1,10 @@
+.game-card-style{
+    text-align: center;
+    
+}
+
+.play-game-card-style {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}

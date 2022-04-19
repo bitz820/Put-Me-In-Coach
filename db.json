@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Lakers",
       "type": "3v3",
-      "playersNeeded": 0,
+      "playersNeeded": 1,
       "color": "Green",
       "date": "04/23/2022",
       "court": 1
@@ -31,7 +31,7 @@
       "id": 4,
       "name": "Flatirons",
       "type": "5v5",
-      "playersNeeded": 4,
+      "playersNeeded": 3,
       "color": "Blue",
       "date": "05/29/2022",
       "court": 2
@@ -67,7 +67,7 @@
       "id": 8,
       "name": "Dunks",
       "type": "5v5",
-      "playersNeeded": 0,
+      "playersNeeded": 3,
       "color": "Red",
       "date": "05/30/2022",
       "court": 4
@@ -89,6 +89,24 @@
       "color": "Black",
       "date": "05/31/2022",
       "court": 8
+    },
+    {
+      "name": "Brian",
+      "playersNeeded": 2,
+      "type": "5v5",
+      "color": "purple",
+      "date": "04/27/2022",
+      "court": 3,
+      "id": 11
+    },
+    {
+      "name": "MArk",
+      "playersNeeded": 2,
+      "type": "5v5",
+      "color": "orange",
+      "date": "04/05/2022",
+      "court": 3,
+      "id": 12
     }
   ]
 }
