@@ -1,5 +1,6 @@
 .home-style{
     text-align: center;
+    background-color: white ;
     
 }
 
@@ -7,4 +8,28 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+}
+#Homecontainer {
+    width:76%;
+    margin: 0 auto;
+
+}
+section h2 {
+    text-align: center;
+    margin-top: 4rem;
+}
+.headerText {
+    background-color: #656998;
+}
+
+#Home2 {
+    background-color: #495294;
+}
+
+#Home3 {
+    background-color: #6e7ad6;
+}
+
+#Home4 {
+    background-color: #8491f4;
 }

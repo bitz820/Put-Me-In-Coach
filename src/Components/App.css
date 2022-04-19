@@ -1,3 +1,8 @@
 .app-style {
-    background-color: slategray;
+    background-color: rgb(52, 49, 49);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
 }
