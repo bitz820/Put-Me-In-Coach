@@ -32,7 +32,7 @@ label{
 
 input, textarea{
     display: block;
-    background: limegreen;
+    background: rgb(245, 244, 245);
     width: 60%;
     align-items: center;
     padding: .5rem .8rem .5rem .8rem;
