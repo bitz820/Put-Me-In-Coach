@@ -19,6 +19,10 @@ input{
     color: black;
 }
 
+label{
+    color: black;
+}
+
 form {
     display: flex;
     flex-direction: column;

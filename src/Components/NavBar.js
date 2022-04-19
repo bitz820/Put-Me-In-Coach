@@ -20,17 +20,9 @@ const active = {
 
 }
 
-function NavBar() {
+function NavBar({isLoggedIn}) {
     return (
         <div className='nav-style'>
-            <NavLink
-                to="/login"
-                exact
-                style={linkStyles}
-                activeStyle={active}
-            >
-                Login
-            </NavLink>
             <NavLink
                 to="/"
                 exact
@@ -62,6 +54,14 @@ function NavBar() {
                 activeStyle={active}
             >
                 Edit Profile
+            </NavLink>
+            <NavLink
+                to="/login"
+                exact
+                style={linkStyles}
+                activeStyle={active}
+            >
+                {isLoggedIn ? "Logout" : "Login"}
             </NavLink>
 
 

@@ -57,13 +57,12 @@ function FindPlayer({ findAPlayer }) {
                     Players Needed:
                     <input onChange={handleChange} type="text" name="playersNeeded" value={formData.playersNeeded} placeholder="# of players Needed" /><br />
                 </label>
-                <label>
-                    Game Type:
-                    <select onChange={handleChange} name="type">
+                <label> Game Type:
+                    <br /><select onChange={handleChange} name="type">
                         <option value="3v3">3 V 3</option>
                         <option value="5v5">5 V 5</option>
                     </select>
-                </label><br/>
+                </label>
                 <label>
                     Team Color:
                     <input onChange={handleChange} type="text" name="color" value={formData.color} placeholder="Team Color" /><br />

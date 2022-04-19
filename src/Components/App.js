@@ -13,6 +13,8 @@ import EditProfile from './EditProfile'
 
 function App() {
     const [allTeams, setAllTeams] = useState([])
+    const [isLoggedIn, setisLoggedIn] = useState(false)
+
     const history = useHistory()
     // const [filterTeams, setFilterTeams] = useState(allTeams)
 
@@ -65,14 +67,17 @@ function App() {
 
 
     return (
+
+        isLoggedIn ? 
+
         <div className='app-style'>
-            <NavBar />
+            <NavBar isLoggedIn={isLoggedIn}/>
             <Switch>
                 <Route exact path="/">
                     <Home data={allTeams} />
                 </Route>
                 <Route path="/login" >
-                    <Login />
+                    <Login setisLoggedIn={setisLoggedIn} isLoggedIn={isLoggedIn}/>
                 </Route>
                 <Route exact path="/playInAGame">
                     <PlayInAGame incompleteTeams={incompleteTeams} handleAddToTeam={handleAddToTeam}/>
@@ -84,9 +89,12 @@ function App() {
                     <EditProfile />
                 </Route>
             </Switch>
-
         </div>
-    )
+
+        :
+
+        <Login  setisLoggedIn={setisLoggedIn} isLoggedIn={isLoggedIn}/>
+)
 }
 
 export default App

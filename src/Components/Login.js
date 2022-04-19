@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
 import "./Login.css"
 
-const Login = () => {
+const Login = ({setisLoggedIn, isLoggedIn}) => {
 
   // const [errorMessages, setErrorMessages] = useState({})
-  const [isLoggedIn, setisLoggedIn] = useState(false)
   const [loginData, setLoginData] = useState({
     user: "",
     pass: ""
@@ -46,7 +46,16 @@ const Login = () => {
   const onLogin = (e) => {
     e.preventDefault()
     setisLoggedIn(true)
+    history.push("/")
   }
+
+  const userIsLoggedIn = 
+(<div>
+        <p>You are already Logged In! Click Below to Log Out!</p>
+        <button onClick={() => setisLoggedIn(false)}>Log Out</button>
+      </div> )
+  
+  
 
   const FormField = (
     <div>
@@ -64,9 +73,7 @@ const Login = () => {
   return (
     <div className="login-form">
       <div className="title">Sign In</div>
-      {isLoggedIn ? history.push("/")
-        :
-        FormField}
+      {isLoggedIn ? userIsLoggedIn : FormField}
     </div>
   )
 
