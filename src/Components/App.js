@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, useHistory } from 'react-router-dom'
 import "./App.css"
 import NavBar from './NavBar'
 import Home from './Home'
-import FindGame from './FindGame'
+import PlayInAGame from './PlayInAGame'
 import FindPlayer from './FindPlayer'
 import Login from './Login'
 
@@ -11,6 +11,7 @@ import Login from './Login'
 
 function App() {
     const [allTeams, setAllTeams] = useState([])
+    const history = useHistory()
     // const [filterTeams, setFilterTeams] = useState(allTeams)
 
     useEffect(() => {
@@ -36,9 +37,29 @@ function App() {
             })
     }
 
-    const incompleteTeams = allTeams.filter(team =>  team.playersNeeded > 0)
+    const handleAddToTeam = (id, data) => {
+        console.log(id, data)
+        const configObj = {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Accepts: "application/json"
+            },
+            body: JSON.stringify({
+                playersNeeded: data.playersNeeded - 1
+            })
+        }
+        fetch(`http://localhost:3000/teams/${id}`, configObj)
+        .then(r => r.json())
+        .then(updatedInfo => {
+            const updatedArr = allTeams.map(team => team.id !== updatedInfo.id ? team : updatedInfo)
+            setAllTeams(updatedArr)
+            alert(`You have been added to the ${updatedInfo.name} team!  Redirecting to homepage...`)
+            history.push("/")
+        })
+    }
 
-    console.log(incompleteTeams)
+    const incompleteTeams = allTeams.filter(team =>  team.playersNeeded > 0)
 
 
     return (
@@ -48,8 +69,8 @@ function App() {
                 <Route exact path="/">
                     <Home data={allTeams} />
                 </Route>
-                <Route exact path="/findGame">
-                    <FindGame incompleteTeams={incompleteTeams}/>
+                <Route exact path="/playInAGame">
+                    <PlayInAGame incompleteTeams={incompleteTeams} handleAddToTeam={handleAddToTeam}/>
                 </Route>
                 <Route exact path="/findPlayer">
                     <FindPlayer findAPlayer={findAPlayer} />

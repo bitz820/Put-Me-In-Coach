@@ -32,12 +32,12 @@ function NavBar() {
                 Home
             </NavLink>
             <NavLink
-                to="/findGame"
+                to="/playInAGame"
                 exact
                 style={linkStyles}
                 activeStyle={active}
             >
-                Find a Game
+                Play in a Game!
             </NavLink>
             <NavLink
                 to="/findPlayer"
