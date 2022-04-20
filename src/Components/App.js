@@ -9,8 +9,6 @@ import Login from './Login'
 import EditProfile from './EditProfile'
 
 
-
-
 function App() {
     const [allTeams, setAllTeams] = useState([])
     const [isLoggedIn, setisLoggedIn] = useState(false)
