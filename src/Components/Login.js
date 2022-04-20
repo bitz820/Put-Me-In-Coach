@@ -74,6 +74,9 @@ const Login = ({setisLoggedIn, isLoggedIn}) => {
     <div className="login-form">
       <div className="title">Sign In</div>
       {isLoggedIn ? userIsLoggedIn : FormField}
+
+      <img src="https://media3.giphy.com/media/d7ToT8jj75iFQtNTQS/giphy.gif?cid=ecf05e47buzjd7kie703bu5lbpc9mi7dj0cp7v91nl1k8gt8&rid=giphy.gif&ct=s" alt="basketball gif" ></img>
+      
     </div>
   )
 
