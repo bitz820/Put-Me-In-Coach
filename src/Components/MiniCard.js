@@ -4,6 +4,7 @@ import logo5 from "../Media/5Team.png"
 import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Modal from 'react-bootstrap/Modal'
+import { useHistory } from 'react-router-dom'
 
 function MiniCard({ data }) {
     const { name, type, playersNeeded, color, date, court } = data
@@ -13,13 +14,15 @@ function MiniCard({ data }) {
     (bgcolor === "white" || bgcolor === "yellow") ? textColor = "black" : textColor = "white"
     const available = playersNeeded > 0 ? `Players Needed: ${playersNeeded}` : "Team Full!"
     const [show, setShow] = useState(false)
+    const history = useHistory()
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    const handleJoinGame = () => {
+        console.log("hi!")
+        history.push("/playInAGame")
+    }
     return (
-        <>
-
         <div style={{ background: bgcolor, color: textColor }} className={`card-container ${name}`}>
             <div className='card-title'>
                 <h1>Team: {name}</h1>
@@ -31,12 +34,12 @@ function MiniCard({ data }) {
             <div className='miniCard-body'>
                 <p>Game Date: {date}</p>
                 <Button variant="secondary" size="sm" onClick={handleShow}>See More Info</Button>
-                <Modal show={show} onHide={handleClose}>
+                <Modal show={show}>
                     <Modal.Body> 
                     {show ? (<div>
                     <h2>TEAM: {name.toUpperCase()} </h2>
                     <h5>{available} </h5>
-                    <img class="img-modal" src={teamTypeStyle} alt="type of game"></img>
+                    <img className="img-modal" src={teamTypeStyle} alt="type of game"></img>
                     <p>Team Color: {color} </p>
                     <p>Court Number: {court}</p>
                     <p>Game Date: {date}</p>
@@ -46,15 +49,12 @@ function MiniCard({ data }) {
                     null}
                     </Modal.Body>
                     <Modal.Footer>
-                    <Button variant="primary" onClick={handleClose}>Join</Button>
+                    <Button variant="primary" onClick={handleJoinGame}>Join</Button>
                     <Button variant="secondary" onClick={handleClose}>Close</Button>
                     </Modal.Footer>
-                    
-                </Modal>
-                     
+                </Modal> 
             </div>
         </div>
-        </>
     )
 }
 

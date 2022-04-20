@@ -1,7 +1,5 @@
 import React from 'react'
-import "./NavBar.css"
 import { NavLink } from 'react-router-dom'
-
 
 const linkStyles = {
     display: "inline",
@@ -17,8 +15,8 @@ const active = {
     background: "salmon",
     color: "black",
     fontWeight: "bold"
-
 }
+
 
 function NavBar({isLoggedIn}) {
     return (
@@ -63,8 +61,6 @@ function NavBar({isLoggedIn}) {
             >
                 {isLoggedIn ? "Logout" : "Login"}
             </NavLink>
-
-
         </div>
     )
 }

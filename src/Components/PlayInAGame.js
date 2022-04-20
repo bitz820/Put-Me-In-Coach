@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GameCard from './GameCard';
-import "./PlayInAGame.css"
+import styled from "styled-components"
+
 
 function PlayInAGame({ incompleteTeams, handleAddToTeam }) {
 
@@ -10,21 +11,22 @@ function PlayInAGame({ incompleteTeams, handleAddToTeam }) {
 
   const renderTeamsNeedingPlayers = searchResults.map(item => <GameCard handleAddToTeam={handleAddToTeam} key={item.id} data={item} />)
 
+  const DivContainer = styled.div`
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+
+  `
   return (
     <>
-      <div className="search">
         <div className="searchInputs">
           <input onChange={e => setSearchedTeam(e.target.value)} type="text" placeholder={"Search Team Name..."} />
         </div>
-      </div>
-      <div className="game-card-style">
-        <div className='play-game-card-style'>
-          {renderTeamsNeedingPlayers}
-        </div>
-      </div>
+      <DivContainer className='play-game-card-style'>
+        {renderTeamsNeedingPlayers}
+      </DivContainer>
     </>
-
-
   )
 }
 
