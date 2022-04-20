@@ -30,7 +30,7 @@ function MiniCard({ data }) {
             {/* This will eventually be a redirect to a route for the card clicked on, viewing full details of that team! */}
             <div className='miniCard-body'>
                 <p>Game Date: {date}</p>
-                <Button variant="outline-dark" size="sm" onClick={handleShow}>See More Info</Button>
+                <Button variant="secondary" size="sm" onClick={handleShow}>See More Info</Button>
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Body> 
                     {show ? (<div>
@@ -46,8 +46,8 @@ function MiniCard({ data }) {
                     null}
                     </Modal.Body>
                     <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>Close</Button>
                     <Button variant="primary" onClick={handleClose}>Join</Button>
+                    <Button variant="secondary" onClick={handleClose}>Close</Button>
                     </Modal.Footer>
                     
                 </Modal>

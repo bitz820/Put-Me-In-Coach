@@ -27,7 +27,7 @@ function GameCard({ data, handleAddToTeam }) {
                 <p>Team Color: {color} </p>
                 <p>Court Number: {court}</p>
                 <p>Game Date: {date}</p>
-                {playersNeeded > 0 ? <Button variant="outline-dark" size="sm" outline={true} onClick={() => handleAddToTeam(id, data)}>Add Me To This Team!</Button> : null}
+                {playersNeeded > 0 ? <Button variant="secondary" size="sm" outline={true} onClick={() => handleAddToTeam(id, data)}>Add Me To This Team!</Button> : null}
             </div>
         </div>
     )
