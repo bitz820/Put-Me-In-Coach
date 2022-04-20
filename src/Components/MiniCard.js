@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
-import "./MiniCard.css"
 import logo3 from "../Media/3Team.png"
 import logo5 from "../Media/5Team.png"
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Modal from 'react-bootstrap/Modal'
 
 function MiniCard({ data }) {
     const { name, type, playersNeeded, color, date, court } = data
@@ -27,8 +29,9 @@ function MiniCard({ data }) {
             {/* This will eventually be a redirect to a route for the card clicked on, viewing full details of that team! */}
             <div className='miniCard-body'>
                 <p>Game Date: {date}</p>
-                <button onClick={toggleDetails}>See More Info</button>
-                {showDetails ? (<div>
+                <Button variant="outline-dark" size="sm" onClick={toggleDetails}>See More Info</Button>
+                
+                   {showDetails ? (<div>
                     <h3>Game Type: {type} </h3>
                     <h4>{available} </h4>
                     <p>Team Color: {color} </p>
@@ -36,6 +39,7 @@ function MiniCard({ data }) {
                 </div>)
                     :
                     null}
+                     
             </div>
         </div>
     )

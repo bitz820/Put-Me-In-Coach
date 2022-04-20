@@ -2,6 +2,7 @@ import React from 'react'
 import "./GameCard.css"
 import logo3 from "../Media/3Team.png"
 import logo5 from "../Media/5Team.png"
+import Button from 'react-bootstrap/Button'
 
 function GameCard({ data, handleAddToTeam }) {
     const { id, name, type, playersNeeded, color, date, court } = data
@@ -26,7 +27,7 @@ function GameCard({ data, handleAddToTeam }) {
                 <p>Team Color: {color} </p>
                 <p>Court Number: {court}</p>
                 <p>Game Date: {date}</p>
-                {playersNeeded > 0 ? <button onClick={() => handleAddToTeam(id, data)}>Add Me To This Team!</button> : null}
+                {playersNeeded > 0 ? <Button variant="outline-dark" size="sm" outline={true} onClick={() => handleAddToTeam(id, data)}>Add Me To This Team!</Button> : null}
             </div>
         </div>
     )

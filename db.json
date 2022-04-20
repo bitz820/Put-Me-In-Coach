@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Lakers",
       "type": "3v3",
-      "playersNeeded": 0,
+      "playersNeeded": 2,
       "color": "Green",
       "date": "04/23/2022",
       "court": 1
@@ -31,7 +31,7 @@
       "id": 4,
       "name": "Flatirons",
       "type": "5v5",
-      "playersNeeded": 3,
+      "playersNeeded": 5,
       "color": "Blue",
       "date": "05/29/2022",
       "court": 2
@@ -40,7 +40,7 @@
       "id": 5,
       "name": "Stack Squad",
       "type": "3v3",
-      "playersNeeded": 0,
+      "playersNeeded": 1,
       "color": "Red",
       "date": "05/29/2022",
       "court": 2
@@ -49,7 +49,7 @@
       "id": 6,
       "name": "Curry Squad",
       "type": "3v3",
-      "playersNeeded": 2,
+      "playersNeeded": 1,
       "color": "Yellow",
       "date": "05/30/2022",
       "court": 1
@@ -58,7 +58,7 @@
       "id": 7,
       "name": "Hammer Time",
       "type": "3v3",
-      "playersNeeded": 0,
+      "playersNeeded": 1,
       "color": "Black",
       "date": "05/30/2022",
       "court": 3
@@ -91,22 +91,13 @@
       "court": 8
     },
     {
-      "name": "Brian",
-      "playersNeeded": 2,
-      "type": "5v5",
-      "color": "purple",
-      "date": "04/27/2022",
-      "court": 3,
-      "id": 11
-    },
-    {
       "name": "MArk",
       "playersNeeded": 2,
       "type": "5v5",
       "color": "orange",
       "date": "04/05/2022",
       "court": 3,
-      "id": 12
+      "id": 11
     },
     {
       "name": "TEST",
@@ -115,16 +106,7 @@
       "color": "magenta",
       "date": "04/21/2022",
       "court": 3,
-      "id": 13
-    },
-    {
-      "name": "Snickers",
-      "playersNeeded": 2,
-      "type": "",
-      "color": "firebrickred",
-      "date": "04/11/2022",
-      "court": 1,
-      "id": 14
+      "id": 12
     }
   ]
 }

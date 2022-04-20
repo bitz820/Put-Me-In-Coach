@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import MiniCard from './MiniCard'
 import "./Home.css"
+import Button from 'react-bootstrap/Button'
 
 
 function Home({ data }) {
