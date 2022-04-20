@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Modal from 'react-bootstrap/Modal'
 import { useHistory } from 'react-router-dom'
+import './MiniCard.css'
 
 function MiniCard({ data }) {
     const { name, type, playersNeeded, color, date, court } = data
@@ -23,7 +24,7 @@ function MiniCard({ data }) {
         history.push("/playInAGame")
     }
     return (
-        <div style={{ background: bgcolor, color: textColor }} className={`card-container ${name}`}>
+        <div style={{ background: bgcolor, color: textColor }} id='minicards' className={`card-container ${name}`}>
             <div className='card-title'>
                 <h1>Team: {name}</h1>
             </div>
