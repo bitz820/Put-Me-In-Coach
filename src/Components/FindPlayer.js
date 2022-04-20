@@ -79,6 +79,7 @@ function FindPlayer({ findAPlayer }) {
         <Div className="findPlayer">
             <h1>Find-A-Player</h1>
             <h3>In a Pinch? Fill out the form below and request a last minute substitution!</h3>
+            <img src="https://media0.giphy.com/media/gHpiRuBWFYMoiTCt71/giphy.gif?cid=ecf05e47tyxs5pacck3v58mvk2dv1y506za1uqudxgyzlkqn&rid=giphy.gif&ct=s" alt="basketball gif" width="150" height="200"></img>
             <form className='form-style' onSubmit={handleSubmit}>
                 <Label>
                     Team Name:
@@ -108,6 +109,7 @@ function FindPlayer({ findAPlayer }) {
                 </Label>
                 <Input type="submit" />
             </form>
+            
         </Div >
     )
 }
