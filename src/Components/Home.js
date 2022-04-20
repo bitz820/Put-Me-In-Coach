@@ -3,7 +3,6 @@ import MiniCard from './MiniCard'
 import "./Home.css"
 
 
-
 function Home({ data }) {
   console.log(data)
 
@@ -41,11 +40,9 @@ if (sortState === "a") {
         </select>
       </div>
 
-      <div className='games-by-date'  >
         <div className='home-card-style ' id='Home2'>
           {showSort}
         </div>
-      </div>
     </div>
   )
 }

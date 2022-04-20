@@ -1,4 +1,4 @@
-import "./FindPlayer.css"
+import styled from "styled-components"
 import React, { useState } from 'react'
 import { useHistory } from "react-router-dom"
 
@@ -44,40 +44,71 @@ function FindPlayer({ findAPlayer }) {
         // Persist the data and redirect user to the home page
     }
 
+    const Div = styled.div`
+        text-align: center;
+    min-width: 100%;
+    height: 100%;
+    margin: 0vw;
+    padding: 5vw ;
+    position:relative; 
+    background-color: #656998 ;
+    `
+
+    const Label = styled.label`
+    color: white;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin: 0 0 2vh 0;
+    `
+
+    const Input = styled.input`
+    display: block;
+    background: rgb(245, 244, 245);
+    width: 80%;
+    align-items: center;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+
+    `
+
     return (
-        <div className="findPlayer">
+        <Div className="findPlayer">
             <h1>Find-A-Player</h1>
             <h3>In a Pinch? Fill out the form below and request a last minute substitution!</h3>
             <form className='form-style' onSubmit={handleSubmit}>
-                <label>
+                <Label>
                     Team Name:
-                    <input onChange={handleChange} type="text" name="name" value={formData.name} placeholder="Team Name" /><br />
-                </label>
-                <label>
+                    <Input onChange={handleChange} type="text" name="name" value={formData.name} placeholder="Team Name" /><br />
+                </Label>
+                <Label>
                     Players Needed:
-                    <input onChange={handleChange} type="text" name="playersNeeded" value={formData.playersNeeded} placeholder="# of players Needed" /><br />
-                </label>
-                <label> Game Type:
+                    <Input onChange={handleChange} type="text" name="playersNeeded" value={formData.playersNeeded} placeholder="# of players Needed" /><br />
+                </Label>
+                <Label> Game Type:
                     <br /><select onChange={handleChange} name="type">
                         <option value="3v3">3 V 3</option>
                         <option value="5v5">5 V 5</option>
                     </select>
-                </label>
-                <label>
+                </Label>
+                <Label>
                     Team Color:
-                    <input onChange={handleChange} type="text" name="color" value={formData.color} placeholder="Team Color" /><br />
-                </label>
-                <label>
+                    <Input onChange={handleChange} type="text" name="color" value={formData.color} placeholder="Team Color" /><br />
+                </Label>
+                <Label>
                     Date of Game:
-                    <input onChange={handleChange} type="date" name="date" value={formData.date} placeholder="Date of Game" /><br />
-                </label>
-                <label>
+                    <Input onChange={handleChange} type="date" name="date" value={formData.date} placeholder="Date of Game" /><br />
+                </Label>
+                <Label>
                     Court Number:
-                    <input onChange={handleChange} type="text" name="court" value={formData.court} placeholder="Court Number" /><br />
-                </label>
-                <input type="submit" />
+                    <Input onChange={handleChange} type="text" name="court" value={formData.court} placeholder="Court Number" /><br />
+                </Label>
+                <Input type="submit" />
             </form>
-        </div >
+        </Div >
     )
 }
 

@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import {Prompt} from 'react-router-dom'
-import "./EditPlayer.css"
-function EditProfile() {
+import styled from "styled-components"
 
+function EditProfile() {
   
 const [userInfo, setUserInfo] = useState({
     firstName: "Mark",
@@ -29,39 +29,52 @@ const saveChanges = (e) => {
     })
 }
 
+const Div = styled.div`
+text-align: center;
+`
+
+const Input = styled.input`
+    display: block;
+    background: rgb(245, 244, 245);
+    width: 80%;
+    align-items: center;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: .9vw 0 ;
+    border:0;
+    border-radius: 5px;
+    font-size: 20px;
+`
 
   return (
-    <div className= 'EditProfile'> 
-    <div>
+    <Div>
         <Prompt when={isDataChanged} message={() => "You have unsaved changes! Are you sure you want to leave?"} />
     <h2>Welcome to Edit Profile...</h2>
     <p>
-      <label>First Name : <input type="text" name="firstName" 
+      <label>First Name : <Input type="text" name="firstName" 
       onChange={(e) => onUserDataChange(e)}
-       value={userInfo.firstName}></input></label>
+       value={userInfo.firstName}/></label>
     </p>
     <p>
-      <label>Last Name : <input type="text" name="lastName" 
-      onChange={onUserDataChange} value={userInfo.lastName}></input></label>
+      <label>Last Name : <Input type="text" name="lastName" 
+      onChange={onUserDataChange} value={userInfo.lastName}/></label>
     </p>
     <p>
-      <label>User Name : <input type="text" name="userName" 
+      <label>User Name : <Input type="text" name="userName" 
       onChange={onUserDataChange}
-       value={userInfo.userName}></input></label>
+       value={userInfo.userName}/></label>
     </p>
     <p>
-      <label>Email : <input type="text" name="email" 
+      <label>Email : <Input type="text" name="email" 
       onChange={onUserDataChange}
-       value={userInfo.email}></input></label>
+       value={userInfo.email}/></label>
     </p>
     <p>
-      <label>Contact Number : <input type="text" name="number" 
+      <label>Contact Number : <Input type="text" name="number" 
       onChange={onUserDataChange}
-       value={userInfo.number}></input></label>
+       value={userInfo.number}/></label>
     </p>
     <button onClick={saveChanges}>Save</button>
-  </div>
-  </div>
+  </Div>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, useHistory } from 'react-router-dom'
-import "./App.css"
+import styled from "styled-components";
 import NavBar from './NavBar'
 import Home from './Home'
 import PlayInAGame from './PlayInAGame'
@@ -52,47 +52,52 @@ function App() {
             })
         }
         fetch(`http://localhost:3000/teams/${id}`, configObj)
-        .then(r => r.json())
-        .then(updatedInfo => {
-            const updatedArr = allTeams.map(team => team.id !== updatedInfo.id ? team : updatedInfo)
-            setAllTeams(updatedArr)
-            alert(`You have been added to the ${updatedInfo.name} team!  Redirecting to homepage...`)
-            history.push("/")
-        })
+            .then(r => r.json())
+            .then(updatedInfo => {
+                const updatedArr = allTeams.map(team => team.id !== updatedInfo.id ? team : updatedInfo)
+                setAllTeams(updatedArr)
+                alert(`You have been added to the ${updatedInfo.name} team!  Redirecting to homepage...`)
+                history.push("/")
+            })
     }
 
-    const incompleteTeams = allTeams.filter(team =>  team.playersNeeded > 0)
+    const incompleteTeams = allTeams.filter(team => team.playersNeeded > 0)
 
+    const Div = styled.div`
+        background-color: #656998;
+        font-family: 'Montserrat', sans-serif;
+        color: black;
+    `
 
     return (
 
-        isLoggedIn ? 
+        isLoggedIn ?
 
-        <div className='app-style'>
-            <NavBar isLoggedIn={isLoggedIn}/>
-            <Switch>
-                <Route exact path="/">
-                    <Home data={allTeams} />
-                </Route>
-                <Route path="/login" >
-                    <Login setisLoggedIn={setisLoggedIn} isLoggedIn={isLoggedIn}/>
-                </Route>
-                <Route exact path="/playInAGame">
-                    <PlayInAGame incompleteTeams={incompleteTeams} handleAddToTeam={handleAddToTeam}/>
-                </Route>
-                <Route exact path="/findPlayer">
-                    <FindPlayer findAPlayer={findAPlayer} />
-                </Route>
-                <Route path="/editProfile">
-                    <EditProfile />
-                </Route>
-            </Switch>
-        </div>
+            <Div className='app-style'>
+                <NavBar isLoggedIn={isLoggedIn} />
+                <Switch>
+                    <Route exact path="/">
+                        <Home data={allTeams} />
+                    </Route>
+                    <Route path="/login" >
+                        <Login setisLoggedIn={setisLoggedIn} isLoggedIn={isLoggedIn} />
+                    </Route>
+                    <Route exact path="/playInAGame">
+                        <PlayInAGame incompleteTeams={incompleteTeams} handleAddToTeam={handleAddToTeam} />
+                    </Route>
+                    <Route exact path="/findPlayer">
+                        <FindPlayer findAPlayer={findAPlayer} />
+                    </Route>
+                    <Route path="/editProfile">
+                        <EditProfile />
+                    </Route>
+                </Switch>
+            </Div>
 
-        :
+            :
 
-        <Login  setisLoggedIn={setisLoggedIn} isLoggedIn={isLoggedIn}/>
-)
+            <Login setisLoggedIn={setisLoggedIn} isLoggedIn={isLoggedIn} />
+    )
 }
 
 export default App
