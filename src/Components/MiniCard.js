@@ -34,7 +34,7 @@ function MiniCard({ data }) {
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Body> 
                     {show ? (<div>
-                    <h2>TEAM: {name} </h2>
+                    <h2>TEAM: {name.toUpperCase()} </h2>
                     <h5>{available} </h5>
                     <img class="img-modal" src={teamTypeStyle} alt="type of game"></img>
                     <p>Team Color: {color} </p>

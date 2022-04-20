@@ -34,7 +34,7 @@ label{
 input, textarea{
     display: block;
     background: rgb(245, 244, 245);
-    width: 100%;
+    width: 80%;
     align-items: center;
     padding: .5rem .8rem .5rem .8rem;
     margin: .9vw 0 ;

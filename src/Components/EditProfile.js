@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import {Prompt} from 'react-router-dom'
+import "./EditPlayer.css"
 function EditProfile() {
 
+  
 const [userInfo, setUserInfo] = useState({
     firstName: "Mark",
     lastName: "Bacon",
@@ -29,6 +31,7 @@ const saveChanges = (e) => {
 
 
   return (
+    <div className= 'EditProfile'> 
     <div>
         <Prompt when={isDataChanged} message={() => "You have unsaved changes! Are you sure you want to leave?"} />
     <h2>Welcome to Edit Profile...</h2>
@@ -57,6 +60,7 @@ const saveChanges = (e) => {
        value={userInfo.number}></input></label>
     </p>
     <button onClick={saveChanges}>Save</button>
+  </div>
   </div>
   )
 }
