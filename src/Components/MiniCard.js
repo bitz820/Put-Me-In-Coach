@@ -12,13 +12,14 @@ function MiniCard({ data }) {
     let textColor;
     (bgcolor === "white" || bgcolor === "yellow") ? textColor = "black" : textColor = "white"
     const available = playersNeeded > 0 ? `Players Needed: ${playersNeeded}` : "Team Full!"
-    const [showDetails, setShowDetails] = useState(false)
+    const [show, setShow] = useState(false)
 
-    const toggleDetails = () => {
-        setShowDetails(!showDetails)
-    }
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     return (
+        <>
+
         <div style={{ background: bgcolor, color: textColor }} className={`card-container ${name}`}>
             <div className='card-title'>
                 <h1>Team: {name}</h1>
@@ -29,19 +30,30 @@ function MiniCard({ data }) {
             {/* This will eventually be a redirect to a route for the card clicked on, viewing full details of that team! */}
             <div className='miniCard-body'>
                 <p>Game Date: {date}</p>
-                <Button variant="outline-dark" size="sm" onClick={toggleDetails}>See More Info</Button>
-                
-                   {showDetails ? (<div>
-                    <h3>Game Type: {type} </h3>
-                    <h4>{available} </h4>
+                <Button variant="outline-dark" size="sm" onClick={handleShow}>See More Info</Button>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Body> 
+                    {show ? (<div>
+                    <h2>TEAM: {name} </h2>
+                    <h5>{available} </h5>
+                    <img class="img-modal" src={teamTypeStyle} alt="type of game"></img>
                     <p>Team Color: {color} </p>
                     <p>Court Number: {court}</p>
+                    <p>Game Date: {date}</p>
+                    
                 </div>)
                     :
                     null}
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>Close</Button>
+                    </Modal.Footer>
+                    
+                </Modal>
                      
             </div>
         </div>
+        </>
     )
 }
 
