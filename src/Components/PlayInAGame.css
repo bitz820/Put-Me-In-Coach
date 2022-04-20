@@ -1,0 +1,9 @@
+.searchInputs {
+    display: 'block';
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 40%; */
+    padding: 10px;
+    width: 300px;
+   
+}

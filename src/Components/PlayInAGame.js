@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GameCard from './GameCard';
 import styled from "styled-components"
+import './PlayInAGame.css'
 
 
 function PlayInAGame({ incompleteTeams, handleAddToTeam }) {
@@ -18,10 +19,15 @@ function PlayInAGame({ incompleteTeams, handleAddToTeam }) {
     justify-content: space-evenly;
 
   `
+
   return (
     <>
-        <div className="searchInputs">
-          <input onChange={e => setSearchedTeam(e.target.value)} type="text" placeholder={"Search Team Name..."} />
+        <div  className="searchInputs">
+          <input 
+          onChange={e => setSearchedTeam(e.target.value)} 
+          type="text" 
+          placeholder={"Search Team Name..."}
+           />
         </div>
       <DivContainer className='play-game-card-style'>
         {renderTeamsNeedingPlayers}
