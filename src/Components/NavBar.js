@@ -18,7 +18,7 @@ const active = {
 }
 
 
-function NavBar({isLoggedIn}) {
+const NavBar = ({isLoggedIn}) => {
     return (
         <div className='nav-style'>
             <NavLink

@@ -2,8 +2,36 @@ import styled from "styled-components"
 import React, { useState } from 'react'
 import { useHistory } from "react-router-dom"
 
+const Div = styled.div`
+text-align: center;
+min-width: 100%;
+height: 100%;
+margin: 0vw;
+padding: 5vw ;
+position:relative; 
+background-color: #656998 ;
+`
 
-function FindPlayer({ findAPlayer }) {
+const Label = styled.label`
+color: white;
+/* display: block; */
+text-align: center;
+font-size: 20px;
+margin: 0 0 2vh 0;
+`
+
+const Input = styled.input`
+background: rgb(245, 244, 245);
+width: 80%;
+text-align: center;
+padding: .5rem .8rem .5rem .8rem;
+margin: .9vw 0 ;
+border:0;
+border-radius: 5px;
+font-size: 20px;
+`
+
+const FindPlayer = ({ findAPlayer }) => {
     const history = useHistory()
 
     const [formData, setFormData] = useState({
@@ -43,36 +71,6 @@ function FindPlayer({ findAPlayer }) {
         history.push("/")
         // Persist the data and redirect user to the home page
     }
-
-    const Div = styled.div`
-        text-align: center;
-    min-width: 100%;
-    height: 100%;
-    margin: 0vw;
-    padding: 5vw ;
-    position:relative; 
-    background-color: #656998 ;
-    `
-
-    const Label = styled.label`
-    color: white;
-    display: block;
-    text-align: center;
-    font-size: 20px;
-    margin: 0 0 2vh 0;
-    `
-
-    const Input = styled.input`
-    display: block;
-    background: rgb(245, 244, 245);
-    width: 80%;
-    align-items: center;
-    padding: .5rem .8rem .5rem .8rem;
-    margin: .9vw 0 ;
-    border:0;
-    border-radius: 5px;
-    font-size: 20px;
-    `
 
     return (
         <Div className="findPlayer">

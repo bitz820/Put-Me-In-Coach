@@ -8,8 +8,13 @@ import FindPlayer from './FindPlayer'
 import Login from './Login'
 import EditProfile from './EditProfile'
 
+const Div = styled.div`
+background-color: #656998;
+font-family: 'Montserrat', sans-serif;
+color: black;
+`
 
-function App() {
+const App = () => {
     const [allTeams, setAllTeams] = useState([])
     const [isLoggedIn, setisLoggedIn] = useState(false)
 
@@ -62,12 +67,6 @@ function App() {
     }
 
     const incompleteTeams = allTeams.filter(team => team.playersNeeded > 0)
-
-    const Div = styled.div`
-        background-color: #656998;
-        font-family: 'Montserrat', sans-serif;
-        color: black;
-    `
 
     return (
 

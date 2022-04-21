@@ -1,10 +1,26 @@
 import React, { useState } from 'react'
 import MiniCard from './MiniCard'
-import "./Home.css"
+import styled from "styled-components"
 
+const ContainerDiv = styled.div`
+    text-align: center;
+    background-color: white ;
+    width:76%;
+    margin: 0 auto;
+`
 
-function Home({ data }) {
-  console.log(data)
+const CardStyleDiv = styled.div`
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: #40456c;
+`
+
+const HeaderDiv = styled.div`
+ background-color: #656998;
+`
+
+const Home = ({ data }) => {
 
   const sortByDate = data.sort((a, b) => a.date.localeCompare(b.date))
   const renderTeamsByDate = sortByDate.map(team => <MiniCard key={team.id} data={team} />)
@@ -25,12 +41,12 @@ if (sortState === "a") {
   }
 
   return (
-    <div className='home-style' id='Homecontainer'>
-      <div className='headerText'>
+    <ContainerDiv>
+      <HeaderDiv>
         <h1>Welcome to Put Me In, Coach!</h1>
         <h3>Your #1 Source for last minute substitutions and available pickup games!</h3>
         <p>Feel free to take a look around.  Our aim is to help you find the perfect match for your pickup game.  Whether you are a team captain or Coach looking for a sub, a player looking to join a game last minute, or a spectator just here for the show we trust that this app will help you find just what you're looking for! </p>
-      </div>
+      </HeaderDiv>
       <div className="ddApp" >
         <h1>Upcoming Games</h1>
         <select className="custom-select" onChange={(e) => setSortState(e.target.value)} >
@@ -40,10 +56,10 @@ if (sortState === "a") {
         </select>
       </div>
 
-        <div className='home-card-style ' id='Home2'>
+        <CardStyleDiv className='home-card-style ' id='Home2'>
           {showSort}
-        </div>
-    </div>
+        </CardStyleDiv>
+    </ContainerDiv>
   )
 }
 
