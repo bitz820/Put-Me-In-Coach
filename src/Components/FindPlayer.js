@@ -72,7 +72,6 @@ function FindPlayer({ findAPlayer }) {
     border:0;
     border-radius: 5px;
     font-size: 20px;
-
     `
 
     return (
