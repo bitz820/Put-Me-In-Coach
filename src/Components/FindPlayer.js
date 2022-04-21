@@ -56,20 +56,19 @@ const FindPlayer = ({ findAPlayer }) => {
         const input = formData.date
         const [year, month, day] = input.split('-')
         const formatDate = `${month}/${day}/${year}`
+        const formatColor = (formData.color.charAt(0).toUpperCase() + formData.color.slice(1))
         const request = {
             name: formData.name,
             playersNeeded: parseInt(formData.playersNeeded),
             type: formData.type,
-            color: formData.color,
+            color: formatColor,
             date: formatDate,
-            // date: formData.date,
             court: parseInt(formData.court)
         }
         console.log(request)
         findAPlayer(request)
         alert("Player Request has been added! Redirecting to Homepage...")
         history.push("/")
-        // Persist the data and redirect user to the home page
     }
 
     return (
