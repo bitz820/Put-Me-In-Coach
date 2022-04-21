@@ -39,7 +39,7 @@ const FindPlayer = ({ findAPlayer }) => {
         playersNeeded: "",
         type: "",
         color: "",
-        date: 12 / 31 / 2022,
+        date: 12/23/2022,
         court: ""
     })
 
