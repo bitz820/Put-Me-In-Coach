@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import styled from "styled-components"
 
 const linkStyles = {
     display: "inline",
@@ -17,10 +18,21 @@ const active = {
     fontWeight: "bold"
 }
 
+const NavStyle = styled.div`
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: space-around;
+`
+
 
 const NavBar = ({isLoggedIn}) => {
     return (
-        <div className='nav-style'>
+        <NavStyle className='nav-style'>
             <NavLink
                 to="/"
                 exact
@@ -61,7 +73,7 @@ const NavBar = ({isLoggedIn}) => {
             >
                 {isLoggedIn ? "Logout" : "Login"}
             </NavLink>
-        </div>
+        </NavStyle>
     )
 }
 
