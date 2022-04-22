@@ -7,15 +7,17 @@ const linkStyles = {
     width: "100%",
     padding: "12px",
     margin: "0 6px 6px",
-    background: "#656998",
+    background: "black",
+    border: "salmon 6px solid",
     textDecoration: "none",
-    color: "white",
+    color: "salmon",
 }
 
 const active = {
     background: "salmon",
-    color: "black",
-    fontWeight: "bold"
+    color: "white",
+    fontWeight: "bold",
+    border: "white 6px solid"
 }
 
 const NavStyle = styled.div`
