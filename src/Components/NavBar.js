@@ -15,7 +15,8 @@ const linkStyles = {
 const active = {
     background: "salmon",
     color: "black",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    border: "white 6px solid"
 }
 
 const NavStyle = styled.div`

@@ -14,6 +14,7 @@ const SearchInput = styled.div`
     margin-right: auto;
     padding: 75px;
     text-align: center;
+    
 `
 
 const PlayInAGame = ({ incompleteTeams, handleAddToTeam }) => {

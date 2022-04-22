@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import MiniCard from './MiniCard'
 import styled from "styled-components"
 
+
 const ContainerDiv = styled.div`
     text-align: center;
     background-color: white ;
