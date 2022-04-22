@@ -12,9 +12,11 @@ const SearchInput = styled.div`
     display: 'block';
     margin-left: auto;
     margin-right: auto;
-    padding: 75px;
+    padding: 30px;
+    background-color: salmon;
+    border: solid black 6px;
     text-align: center;
-    
+    font-size: 25px;
 `
 
 const PlayInAGame = ({ incompleteTeams, handleAddToTeam }) => {

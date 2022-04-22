@@ -3,20 +3,33 @@ import { Prompt } from 'react-router-dom'
 import styled from "styled-components"
 
 
-const Div = styled.div`
-text-align: center;
+const Label = styled.label`
+font-size: 30px;
 `
 
 const Input = styled.input`
     display: block;
     background: rgb(245, 244, 245);
-    width: 80%;
+    width: 100%;
+    text-align: center;
     align-items: center;
     padding: .5rem .8rem .5rem .8rem;
     margin: .9vw 0 ;
     border:0;
     border-radius: 5px;
     font-size: 20px;
+`
+
+const HeaderDiv = styled.div`
+    display: 'block';
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: salmon;
+    border: solid black 6px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
 `
 
 const EditProfile = () => {
@@ -50,36 +63,36 @@ const EditProfile = () => {
 
 
   return (
-    <Div>
+    <div>
       <Prompt when={isDataChanged} message={() => "You have unsaved changes! Are you sure you want to leave?"} />
-      <h2>Welcome to Edit Profile...</h2>
+      <HeaderDiv>Welcome to Edit Profile...</HeaderDiv>
       <p>
-        <label>First Name : <Input type="text" name="firstName"
+        <Label>First Name : <Input type="text" name="firstName"
           onChange={(e) => onUserDataChange(e)}
-          value={userInfo.firstName} /></label>
+          value={userInfo.firstName} /></Label>
       </p>
       <p>
-        <label>Last Name : <Input type="text" name="lastName"
+        <Label>Last Name : <Input type="text" name="lastName"
           onChange={onUserDataChange} 
-          value={userInfo.lastName} /></label>
+          value={userInfo.lastName} /></Label>
       </p>
       <p>
-        <label>User Name : <Input type="text" name="userName"
+        <Label>User Name : <Input type="text" name="userName"
           onChange={onUserDataChange}
-          value={userInfo.userName} /></label>
+          value={userInfo.userName} /></Label>
       </p>
       <p>
-        <label>Email : <Input type="text" name="email"
+        <Label>Email : <Input type="text" name="email"
           onChange={onUserDataChange}
-          value={userInfo.email} /></label>
+          value={userInfo.email} /></Label>
       </p>
       <p>
-        <label>Contact Number : <Input type="text" name="number"
+        <Label>Contact Number : <Input type="text" name="number"
           onChange={onUserDataChange}
-          value={userInfo.number} /></label>
+          value={userInfo.number} /></Label>
       </p>
       <button onClick={saveChanges}>Save</button>
-    </Div>
+    </div>
   )
 }
 

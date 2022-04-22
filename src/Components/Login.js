@@ -18,7 +18,17 @@ const Form = styled.form`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
+`
+const HeaderDiv = styled.div`
+    display: 'block';
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: salmon;
+    border: solid black 6px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
 `
 
 const Login = ({ setisLoggedIn, isLoggedIn }) => {
@@ -67,10 +77,10 @@ const Login = ({ setisLoggedIn, isLoggedIn }) => {
   }
 
   const userIsLoggedIn = (
-    <div>
+    <HeaderDiv>
       <p>You are already Logged In! Click Below to Log Out!</p>
       <button onClick={() => setisLoggedIn(false)}>Log Out</button>
-    </div>
+    </HeaderDiv>
   )
 
 
@@ -88,7 +98,8 @@ const Login = ({ setisLoggedIn, isLoggedIn }) => {
 
   return (
     <LoginDiv className="login-form">
-      <Title>{isLoggedIn ? "Sign Out!" : "Sign In!"}</Title>
+      <Title>{isLoggedIn ? "Sign Out?" : `Welcome to Put Me In Coach!`}</Title>
+      {isLoggedIn ? null : <h3> Please Sign In...</h3>}
       {isLoggedIn ? userIsLoggedIn : FormField}
       <img src="https://media3.giphy.com/media/d7ToT8jj75iFQtNTQS/giphy.gif?cid=ecf05e47buzjd7kie703bu5lbpc9mi7dj0cp7v91nl1k8gt8&rid=giphy.gif&ct=s" alt="basketball gif" ></img>
     </LoginDiv>

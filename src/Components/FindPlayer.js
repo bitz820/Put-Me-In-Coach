@@ -12,6 +12,18 @@ position:relative;
 background-color: #656998 ;
 `
 
+const HeaderDiv = styled.div`
+    display: 'block';
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: salmon;
+    border: solid black 6px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+`
+
 const Label = styled.label`
 color: white;
 /* display: block; */
@@ -39,7 +51,7 @@ const FindPlayer = ({ findAPlayer }) => {
         playersNeeded: "",
         type: "",
         color: "",
-        date: 12/23/2022,
+        date: 12 / 23 / 2022,
         court: ""
     })
 
@@ -73,9 +85,10 @@ const FindPlayer = ({ findAPlayer }) => {
 
     return (
         <Div className="findPlayer">
-            <h1>Find-A-Player</h1>
-            <h3>In a Pinch? Fill out the form below and request a last minute substitution!</h3>
-            <img src="https://media0.giphy.com/media/gHpiRuBWFYMoiTCt71/giphy.gif?cid=ecf05e47tyxs5pacck3v58mvk2dv1y506za1uqudxgyzlkqn&rid=giphy.gif&ct=s" alt="basketball gif" width="150" height="200"></img>
+            <HeaderDiv>
+                <h1>Find-A-Player</h1>
+                <h3>In a Pinch? Fill out the form below and request a last minute substitution!</h3>
+            </HeaderDiv>
             <form className='form-style' onSubmit={handleSubmit}>
                 <Label>
                     Team Name:
@@ -102,10 +115,11 @@ const FindPlayer = ({ findAPlayer }) => {
                 <Label>
                     Court Number:
                     <Input onChange={handleChange} type="text" name="court" value={formData.court} placeholder="Court Number" /><br />
-                </Label>
-                <Input type="submit" />
+                </Label><br />
+                <img src="https://media0.giphy.com/media/gHpiRuBWFYMoiTCt71/giphy.gif?cid=ecf05e47tyxs5pacck3v58mvk2dv1y506za1uqudxgyzlkqn&rid=giphy.gif&ct=s" alt="basketball gif" width="150" height="200"></img>
+                <br /><Input type="submit" />
             </form>
-            
+
         </Div >
     )
 }
