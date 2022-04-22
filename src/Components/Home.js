@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import MiniCard from './MiniCard'
 import styled from "styled-components"
 import image from "../Media/image.png"
-import newBB from "../Media/newBB.jpeg"
 
 
 const ContainerDiv = styled.div`
