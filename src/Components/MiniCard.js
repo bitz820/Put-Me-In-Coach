@@ -23,6 +23,11 @@ const StyleModal = styled(Modal)`
 text-align: center;
 `
 
+const ModalBodyDiv = styled(Modal.Body)`
+background-color: ${props => props.color};
+color: ${props => props.color === "White" || props.color === "Yellow" ? "black" : "white"};
+`
+
 const MiniCard = ({ data }) => {
     const { name, type, playersNeeded, color, date, court } = data
 
@@ -47,8 +52,8 @@ const MiniCard = ({ data }) => {
             <div className='miniCard-body'>
                 <p>Game Date: {date}</p>
                 <Button variant="secondary" size="sm" onClick={handleShow}>See More Info</Button>
-                <StyleModal show={show}>
-                    <Modal.Body> 
+                <StyleModal  show={show}>
+                    <ModalBodyDiv color={color}> 
                     {show ? (<div>
                     <h2>TEAM: {name.toUpperCase()} </h2>
                     <h5>{available} </h5>
@@ -60,7 +65,7 @@ const MiniCard = ({ data }) => {
                 </div>)
                     :
                     null}
-                    </Modal.Body>
+                    </ModalBodyDiv>
                     <Modal.Footer>
                     <Button variant="primary" onClick={handleJoinGame}>Join</Button>
                     <Button variant="secondary" onClick={handleClose}>Close</Button>

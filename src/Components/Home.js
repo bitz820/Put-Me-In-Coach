@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import MiniCard from './MiniCard'
 import styled from "styled-components"
+import image from "../Media/image.png"
+import newBB from "../Media/newBB.jpeg"
 
 
 const ContainerDiv = styled.div`
     text-align: center;
-    background-color: white ;
-    width:76%;
+    background-color: black;
+    width:85%;
     margin: 0 auto;
 `
 
@@ -19,6 +21,25 @@ const CardStyleDiv = styled.div`
 
 const HeaderDiv = styled.div`
  background-color: #656998;
+ color: black;
+`
+
+const H3 = styled.h3`
+background-color: white;
+`
+
+const SortDiv = styled.div`
+    color: white;
+    background-image: url(${image});
+    background-repeat: no-repeat;
+`
+
+const Select = styled.select`
+font-size: 30px;
+margin: 30px;
+background-color: salmon;
+color: black;
+border: white 6px solid;
 `
 
 const Home = ({ data }) => {
@@ -45,17 +66,17 @@ if (sortState === "a") {
     <ContainerDiv>
       <HeaderDiv>
         <h1>Welcome to Put Me In, Coach!</h1>
-        <h3>Your #1 Source for last minute substitutions and available pickup games!</h3>
+        <H3>Your #1 Source for last minute substitutions and available pickup games!</H3>
         <p>Feel free to take a look around.  Our aim is to help you find the perfect match for your pickup game.  Whether you are a team captain or Coach looking for a sub, a player looking to join a game last minute, or a spectator just here for the show we trust that this app will help you find just what you're looking for! </p>
       </HeaderDiv>
-      <div className="ddApp" >
+      <SortDiv>
         <h1>Upcoming Games</h1>
-        <select className="custom-select" onChange={(e) => setSortState(e.target.value)} >
+        <Select className="custom-select" onChange={(e) => setSortState(e.target.value)} >
           <option value='a'>Sort by Date</option>
           <option value='b'>3 v 3 Games</option>
           <option value='c'>5 v 5 Games</option>
-        </select>
-      </div>
+        </Select>
+      </SortDiv>
 
         <CardStyleDiv className='home-card-style ' id='Home2'>
           {showSort}
