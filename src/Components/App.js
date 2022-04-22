@@ -12,6 +12,7 @@ const Div = styled.div`
 background-color: #656998;
 font-family: 'Montserrat', sans-serif;
 color: black;
+text-align: center;
 `
 
 const App = () => {

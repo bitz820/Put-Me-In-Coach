@@ -89,15 +89,6 @@
       "color": "Black",
       "date": "05/31/2022",
       "court": 8
-    },
-    {
-      "name": "Mark",
-      "playersNeeded": 2,
-      "type": "5v5",
-      "color": "Purple",
-      "date": "undefined/undefined/4/21/2022",
-      "court": null,
-      "id": 11
     }
   ]
 }

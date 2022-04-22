@@ -19,17 +19,24 @@ const CardStyleDiv = styled.div`
 `
 
 const HeaderDiv = styled.div`
- background-color: #656998;
- color: black;
+    display: 'block';
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    background-color: salmon;
+    border: solid black 6px;
+    text-align: center;
+    font-size: 25px;
 `
 
-const H3 = styled.h3`
+const H3 = styled.h2`
 background-color: white;
 `
 
 const SortDiv = styled.div`
     color: white;
     background-image: url(${image});
+    background-size: cover;
     background-repeat: no-repeat;
 `
 
@@ -66,7 +73,7 @@ if (sortState === "a") {
       <HeaderDiv>
         <h1>Welcome to Put Me In, Coach!</h1>
         <H3>Your #1 Source for last minute substitutions and available pickup games!</H3>
-        <p>Feel free to take a look around.  Our aim is to help you find the perfect match for your pickup game.  Whether you are a team captain or Coach looking for a sub, a player looking to join a game last minute, or a spectator just here for the show we trust that this app will help you find just what you're looking for! </p>
+        <h4>Feel free to take a look around.  Our aim is to help you find the perfect match for your pickup game.  Whether you are a team captain or Coach looking for a sub, a player looking to join a game last minute, or a spectator just here for the show we trust that this app will help you find just what you're looking for! </h4>
       </HeaderDiv>
       <SortDiv>
         <h1>Upcoming Games</h1>
