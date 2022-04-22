@@ -50,7 +50,7 @@ const MiniCard = ({ data }) => {
             </div>
             {/* This will eventually be a redirect to a route for the card clicked on, viewing full details of that team! */}
             <div className='miniCard-body'>
-                <p>Game Date: {date}</p>
+                <h4>Game Date: {date}</h4>
                 <Button variant="secondary" size="sm" onClick={handleShow}>See More Info</Button>
                 <StyleModal  show={show}>
                     <ModalBodyDiv color={color}> 
@@ -58,11 +58,10 @@ const MiniCard = ({ data }) => {
                     <h2>TEAM: {name.toUpperCase()} </h2>
                     <h5>{available} </h5>
                     <img className="img-modal" src={teamTypeStyle} alt="type of game"></img>
-                    <p>Team Color: {color} </p>
-                    <p>Court Number: {court}</p>
-                    <p>Game Date: {date}</p>
-                    
-                </div>)
+                    <h4>Team Color: {color} </h4>
+                    <h4>Court Number: {court}</h4>
+                    <h4>Game Date: {date}</h4>
+                    </div>)
                     :
                     null}
                     </ModalBodyDiv>
