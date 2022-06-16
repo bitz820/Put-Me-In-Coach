@@ -23,7 +23,7 @@ const App = () => {
     // const [filterTeams, setFilterTeams] = useState(allTeams)
 
     useEffect(() => {
-        fetch("http://localhost:3000/teams")
+        fetch(`${process.env.DATABASE_URL}/teams`)
             .then(r => r.json())
             .then(teams => setAllTeams(teams))
     }, [setAllTeams])
@@ -37,7 +37,7 @@ const App = () => {
             },
             body: JSON.stringify(request)
         }
-        fetch("http://localhost:3000/teams", configObj)
+        fetch(`${process.env.DATABASE_URL}/teams`, configObj)
             .then(r => r.json())
             .then(data => {
                 console.log(data)
@@ -57,7 +57,8 @@ const App = () => {
                 playersNeeded: data.playersNeeded - 1
             })
         }
-        fetch(`http://localhost:3000/teams/${id}`, configObj)
+        fetch(`${process.env.DATABASE_URL}
+        /teams/${id}`, configObj)
             .then(r => r.json())
             .then(updatedInfo => {
                 const updatedArr = allTeams.map(team => team.id !== updatedInfo.id ? team : updatedInfo)
