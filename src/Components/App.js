@@ -23,7 +23,7 @@ const App = () => {
     // const [filterTeams, setFilterTeams] = useState(allTeams)
 
     useEffect(() => {
-        fetch(`${process.env.DATABASE_URL}/teams`)
+        fetch(`${process.env.REACT_APP_API_URL}/teams`)
             .then(r => r.json())
             .then(teams => setAllTeams(teams))
     }, [setAllTeams])
@@ -37,7 +37,7 @@ const App = () => {
             },
             body: JSON.stringify(request)
         }
-        fetch(`${process.env.DATABASE_URL}/teams`, configObj)
+        fetch(`${process.env.REACT_APP_API_URL}/teams`, configObj)
             .then(r => r.json())
             .then(data => {
                 console.log(data)
@@ -57,7 +57,7 @@ const App = () => {
                 playersNeeded: data.playersNeeded - 1
             })
         }
-        fetch(`${process.env.DATABASE_URL}
+        fetch(`${process.env.REACT_APP_API_URL}
         /teams/${id}`, configObj)
             .then(r => r.json())
             .then(updatedInfo => {
