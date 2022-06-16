@@ -57,8 +57,7 @@ const App = () => {
                 playersNeeded: data.playersNeeded - 1
             })
         }
-        fetch(`${process.env.REACT_APP_API_URL}
-        /teams/${id}`, configObj)
+        fetch(`${process.env.REACT_APP_API_URL}/teams/${id}`, configObj)
             .then(r => r.json())
             .then(updatedInfo => {
                 const updatedArr = allTeams.map(team => team.id !== updatedInfo.id ? team : updatedInfo)
