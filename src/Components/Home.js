@@ -49,6 +49,7 @@ border: white 6px solid;
 `
 
 const Home = ({ data }) => {
+  console.log(data)
 
   const sortByDate = data.sort((a, b) => a.date.localeCompare(b.date))
   const renderTeamsByDate = sortByDate.map(team => <MiniCard key={team.id} data={team} />)

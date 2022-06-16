@@ -75,7 +75,7 @@ const FindPlayer = ({ findAPlayer }) => {
             type: formData.type,
             color: formatColor,
             date: formatDate,
-            court: parseInt(formData.court)
+            court: parseInt(formData.court),
         }
         console.log(request)
         findAPlayer(request)

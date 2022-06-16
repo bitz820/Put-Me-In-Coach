@@ -29,6 +29,7 @@ color: ${props => props.color === "White" || props.color === "Yellow" ? "black" 
 `
 
 const MiniCard = ({ data }) => {
+    console.log(data)
     const { name, type, playersNeeded, color, date, court } = data
 
     const teamTypeStyle = type === "3v3" ? logo3 : logo5
@@ -41,7 +42,7 @@ const MiniCard = ({ data }) => {
     const handleJoinGame = () => history.push("/playInAGame")
 
     return (
-        <MiniCardDiv color={color} id='minicards' className={`card-container ${name}`}>
+        <MiniCardDiv color={color} id={data.id} className={`card-container ${name}`}>
             <div className='card-title'>
                 <h1>Team: {name}</h1>
             </div>

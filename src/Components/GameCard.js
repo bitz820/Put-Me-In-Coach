@@ -47,6 +47,7 @@ padding: 3px;
 
 const GameCard = ({ data, handleAddToTeam }) => {
     const { id, name, type, playersNeeded, color, date, court } = data
+    console.log(id)
     const teamTypeStyle = type === "3v3" ? logo3 : logo5
 
     const available = playersNeeded > 0 ? `Players Needed: ${playersNeeded}` : "Team Full!"

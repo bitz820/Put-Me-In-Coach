@@ -24,7 +24,7 @@ const PlayInAGame = ({ incompleteTeams, handleAddToTeam }) => {
   const [searchedTeam, setSearchedTeam] = useState([""])
 
   const searchResults = incompleteTeams.filter((teams) => teams.name.toLowerCase().includes(searchedTeam))
-  const renderTeamsNeedingPlayers = searchResults.map(item => <GameCard handleAddToTeam={handleAddToTeam} key={item.id} data={item} />)
+  const renderTeamsNeedingPlayers = searchResults.map(item => <GameCard data={item} handleAddToTeam={handleAddToTeam} key={item.id}  />)
 
 
   return (

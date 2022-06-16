@@ -26,7 +26,7 @@ const App = () => {
         fetch(`${process.env.REACT_APP_API_URL}/teams`)
             .then(r => r.json())
             .then(teams => setAllTeams(teams))
-    }, [setAllTeams])
+    }, [])
 
     const findAPlayer = (request) => {
         const configObj = {
@@ -41,11 +41,14 @@ const App = () => {
             .then(r => r.json())
             .then(data => {
                 console.log(data)
-                setAllTeams([...allTeams, request])
+                setAllTeams([...allTeams, data])
             })
     }
 
+    
+    
     const handleAddToTeam = (id, data) => {
+        console.log(allTeams)
         console.log(id, data)
         const configObj = {
             method: "PATCH",
@@ -54,7 +57,8 @@ const App = () => {
                 Accepts: "application/json"
             },
             body: JSON.stringify({
-                playersNeeded: data.playersNeeded - 1
+                playersNeeded: data.playersNeeded - 1,
+                id: id
             })
         }
         fetch(`${process.env.REACT_APP_API_URL}/teams/${id}`, configObj)
