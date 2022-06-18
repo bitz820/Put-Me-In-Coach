@@ -23,7 +23,7 @@ const App = () => {
     // const [filterTeams, setFilterTeams] = useState(allTeams)
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/teams`)
+        fetch(`http://localhost:3000/teams`)
             .then(r => r.json())
             .then(teams => setAllTeams(teams))
     }, [])
