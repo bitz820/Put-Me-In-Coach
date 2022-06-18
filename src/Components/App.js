@@ -45,8 +45,6 @@ const App = () => {
             })
     }
 
-    
-    
     const handleAddToTeam = (id, data) => {
         console.log(allTeams)
         console.log(id, data)
